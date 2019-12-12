@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t ret83/react-test -f ./react-client/Dockerfile.dev .
+  - docker build -t ret83/react-test -f ./react-client/Dockerfile.dev ./react-client
 
 script:
   -  docker run -e CI=true ret83/react-test npm run test -- --coverage
