@@ -11,7 +11,7 @@ script:
 after_success:
   - docker build -t ret83/multi-client ./react-client
   - docker build -t ret83/multi-server ./server
-  - docker build -t ret83/multi-wroker ./worker
+  - docker build -t ret83/multi-worker ./worker
   - docker build -t ret83/multi-nginx ./nginx
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
