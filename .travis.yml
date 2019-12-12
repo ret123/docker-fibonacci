@@ -8,7 +8,7 @@ before_install:
 script:
   -  docker run -e CI=true ret83/react-test npm run test -- --coverage
 
-after_install:
+after_success:
   - docker build -t ret83/multi-client ./react-client
   - docker build -t ret83/multi-server ./server
   - docker build -t ret83/multi-wroker ./worker
